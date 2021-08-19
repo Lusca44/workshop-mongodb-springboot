@@ -20,7 +20,7 @@ public class UserService {
 	public List<User> findAll() {
 		return userRepo.findAll();
 	}
-
+	
 	public User findById(String id) {
 		Optional<User> user = userRepo.findById(id);
 		return user.orElseThrow(() -> new ObjectNotFoundException("Object not found"));
